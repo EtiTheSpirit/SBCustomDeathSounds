@@ -13,23 +13,6 @@ function init()
 	self.deathSoundFx = self.playerSpeciesFile["deathNoises"] or DEFAULT_DEATH_NOISE_ARRAY
 end
 
---This is weird.
-function getJsonParameters()
-	return {
-		actionOnReap = {
-			{
-				action = "actions",
-				list = {
-					{
-						action = "sound",
-						options = self.deathSoundFx
-					}
-				}
-			}
-		}
-	}
-end
-
 function wouldDieOnThisFrame()
 	--Is our health zero?
 	if status.stat("health") == 0 then
@@ -55,6 +38,19 @@ function uninit()
 	if olduninit then olduninit() end
 	
 	if wouldDieOnThisFrame() then
-		world.spawnProjectile("hackysoundemitter", entity.position(), player.id(), {0,0}, false, getJsonParameters())
+		world.spawnProjectile("hackysoundemitter", entity.position(), player.id(), {0,0}, false, 
+		{
+			actionOnReap = {
+				{
+					action = "actions",
+					list = {
+						{
+							action = "sound",
+							options = self.deathSoundFx
+						}
+					}
+				}
+			}
+		})
 	end
 end

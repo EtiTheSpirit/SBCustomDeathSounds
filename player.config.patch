@@ -1,3 +1,3 @@
 [
-	{ "op": "add", "path" : "/deploymentConfig/scripts/-", "value" : "/scripts/playerDeployment.lua"}
+	{ "op": "add", "path" : "/deploymentConfig/scripts/-", "value" : "/XCustomDeathSoundSys/DeathSoundHandler.lua"}
 ]
