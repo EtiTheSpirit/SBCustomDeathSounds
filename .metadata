@@ -1,6 +1,9 @@
 {
   "author" : "Xan the Dragon",
-  "description" : "Enables the usage of custom death sounds",
+  "description" : "^green;SBCustomDeathSounds^reset;\nEnables modders to specify custom death sounds for their species\n\n^red;Are you a modder who wants to use this? Have a read^reset;\n^yellow;Implementing this into your species is easy!\n\nIn your species file, specify a `deathNoises` key in the json. This list is similar to `ouchNoises` in that it's a list of sounds. Here's an example implementation featured in my Spirit Guardian mod.\n^darkgray;\n\"ouchNoises\" : [ \"/sfx/humanoid/seinBadlyHurtRegularA.ogg\", \"/sfx/humanoid/seinBadlyHurtRegularB.ogg\", \"/sfx/humanoid/seinBadlyHurtRegularC.ogg\", \"/sfx/humanoid/seinBadlyHurtRegularD.ogg\", \"/sfx/humanoid/seinBadlyHurtRegularE.ogg\" ],\n\"deathNoises\" : [ \"/sfx/humanoid/seinDeathRegularA.ogg\", \"/sfx/humanoid/seinDeathRegularB.ogg\", \"/sfx/humanoid/seinDeathRegularC.ogg\", \"/sfx/humanoid/seinDeathRegularD.ogg\", \"/sfx/humanoid/seinDeathRegularE.ogg\" ],\n^reset;\n\n^green;This is limited in its capabilities!^green;\nThis does **NOT** work on NPCs yet! I may add this in the future depending on how high demand is.\n",
   "friendlyName" : "Custom Death Sounds",
-  "name" : "CustomDeathFx"
+  "link" : "steam://url/CommunityFilePage/1695298616",
+  "name" : "CustomDeathFx",
+  "steamContentId" : "1695298616",
+  "version" : "1.0"
 }
