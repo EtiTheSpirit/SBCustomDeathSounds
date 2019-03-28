@@ -3,7 +3,7 @@ local oldinit = init;
 local olduninit = uninit;
 
 --local DEFAULT_DEATH_NOISE_ARRAY = {"/sfx/humanoid/player_death1.ogg", "/sfx/humanoid/player_death2.ogg", "/sfx/humanoid/player_death3.ogg"}
-local DEFAULT_DEATH_NOISE_ARRAY = {} --Edit: These death sounds aren't even used in the game by default. I could add them to a config switch. Or just let you edit this here on your own.
+local DEFAULT_DEATH_NOISE_ARRAY = {} --Edit: These death sounds aren't even used in the game by default. I could add them to a config switch. Or just let you edit this here on your own, but please be careful for conflicts.
 
 function init()
 	if oldinit then oldinit() end
@@ -33,13 +33,14 @@ function wouldDieOnThisFrame()
 	return false
 end
 
---This runs when the player dies. After, more specifically.
+--This runs when the player dies.
 function uninit()
 	if olduninit then olduninit() end
 	
 	if wouldDieOnThisFrame() then
-		world.spawnProjectile("hackysoundemitter", entity.position(), player.id(), {0,0}, false, 
+		world.spawnProjectile("invisibleprojectile", entity.position(), player.id(), {0,0}, false, 
 		{
+			timeToLive = 0,
 			actionOnReap = {
 				{
 					action = "actions",
