@@ -11,8 +11,8 @@ In your species file, specify a `deathNoises` key in the json. This list is simi
 ```
 
 **From there, you are open to two options**
-1) Pack `player.config.patch` into your mod as well as the `XCustomDeathSoundSys` folder (If your mod already patches `player.config`, just add the one line from my patch into your file). **If you use this method, please mention this github page.**
-2) **Have your users subscribe to steam://url/CommunityFilePage/1695298616 / https://steamcommunity.com/sharedfiles/filedetails/?id=1695298616 (this method is strongly recommended as it ensures you and your users have the latest version + prevents errors originating from multiple mods implementing this file)**
+1) Have your users subscribe to steam://url/CommunityFilePage/1695298616 / https://steamcommunity.com/sharedfiles/filedetails/?id=1695298616
+2) Pack `player.config.patch` and the `scripts` folder into your mod (If your mod already patches `player.config`, just add the one line from my patch into your file). **If you use this method, please mention this github page.**
 
 # This is limited in its capabilities!
 This does **NOT** work on NPCs yet! I may add this in the future depending on how high demand is.
